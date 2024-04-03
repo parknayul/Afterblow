@@ -94,6 +94,7 @@ html, body {
 .header .util .util_txt {
     display: flex;
     align-items: center;
+    font-family: 'GmarketSansMedium';
     font-size: 1.6rem;
 }
 
@@ -375,7 +376,7 @@ html, body {
 /* 콘텐츠2 */
 
 .cont02 {
-    padding:150px 0;
+    padding:150px 0 0;
 }
 
 .cont02 .inner {
@@ -413,7 +414,7 @@ html, body {
 
 .cont02 .inner h3 {
     cursor: default;
-    font-size: 40px;
+    font-size: 3.5rem;
     position: absolute;
     top:18%;
     left: 50%;
@@ -477,12 +478,195 @@ html, body {
 }
 
 .cont02 .inner .list .item h4 {
-    font-size: 16px;
+    font-size: 1.6rem;
     margin: 20px 0 10px;
     font-weight: normal;
 }
 
 .cont02 .inner .list .item strong {
-    font-size: 22px;
+    font-size: 2.2rem;
     color: #f00;
 }
+
+/* 콘텐츠3 */
+
+.cont03 {
+    padding: 150px 0 0;
+}
+
+.cont03 img {
+    max-width: 100%;
+}
+
+/* 텍스트 슬라이드 */
+
+.text_slide {
+    overflow: hidden;
+}
+
+.text_slide p {
+    font-family: "Staatliches", sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 1px #333;
+    animation: textslide 20s infinite linear;
+    white-space: nowrap;
+}
+
+@keyframes textslide {
+    100% {
+        transform: translateX(-100%);/* 시작이 0일때는 생략가능 */
+    }
+}
+
+/* 콘텐츠4 */
+
+.cont04 {
+    padding: 50px 0 150px;
+}
+
+.cont04 a span {
+    display: block;
+    font-size: 1.4rem;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.cont04 .inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.cont04 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont04 .inner .list .event {
+    width: calc(100% / 2 - 40px);
+    position: relative;
+}
+
+.cont04 .inner .list .event::before {
+    content: '';
+    left: 107%;
+    height: 900px;
+    border: 1px solid #9999;
+    display: block;
+    position: absolute;
+    top: 2rem;
+    bottom: 12rem;
+}
+
+.cont04 .inner .list .event:nth-child(2)::before {
+    display: none;
+}
+
+.cont04 .inner .list .event figure {
+    max-height: 730px;
+    height: 57.03vw;
+}
+
+.cont04 .inner .list .event figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont04 .inner .list .event .content_txt {
+    padding: 20px 10px;
+    height: 20px;
+}
+
+.cont04 .inner .list .event .title_txt h4 {
+    font-family: 'GmarketSansMedium';
+    padding: 2rem 0;
+    font-size: 2.8rem;
+}
+
+.cont04 .inner .list .event .content_txt p {
+    font-family: 'GmarketSansMedium';
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.cont04 .inner .list .event .content_txt .btn {
+    margin-top: 2.5rem;
+    text-align: right;
+    font-size: 1.4rem;
+}
+
+.cont04 .inner .list .event .content_txt .btn button {
+    border: 0;
+    padding: 8px 16px;
+    background-color: #c7d5e0;
+}
+
+.footer {
+    margin-top: 150px;
+    border-top: 1px solid #333;
+}
+
+.footer .inner {
+    padding: 20px 0;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer .inner .footer_wrap {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #333;
+}
+
+.footer .inner .footer_wrap .company_info {
+    width: 45%;
+    padding: 20px;
+    font-size: 1.4rem;
+    border-right: 1px solid #333;
+}
+
+.footer .inner .footer_wrap .company_info li {
+    padding: 0.5rem 0;
+}
+
+.footer .inner .footer_wrap .about_company {
+    width: 45%;
+    padding: 20px;
+    font-size: 1.6rem;
+    border-right: 1px solid #333;
+}
+
+.footer .inner .footer_wrap .about_company li {
+    padding: 1rem 0;
+}
+
+.footer .inner .footer_wrap .sns {
+    width: 45%;
+    padding: 20px;
+}
+
+.footer .inner .footer_wrap .sns p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.footer .inner .footer_wrap .sns ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer .inner .footer_wrap .sns ul li img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer .copyright {
+    border-top: 1px solid #333;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+}
+

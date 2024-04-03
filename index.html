@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,91 +10,92 @@
     <script src="lib/jquery-3.7.1.min.js"></script>
 
     <script>
-        $(function(){
+        $(function () {
             let header = $('.header');
             let headerTop = header.offset().top;
             let wrap = document.querySelector('#wrap');
             //offset().top => 브라우저 상단에서부터 떨어진 y축값
             //스크롤 할때마다 값을 찾아주기 때문에 header.removeClass('on'); 했을 때는
             //값이 제대로 안먹힘, 변수 지정하는 부위에 별도로 빼두기
-            
-            $(window).scroll(function(){
+
+            $(window).scroll(function () {
                 let scrollBar = $(window).scrollTop();
 
-            //console.log(scrollBar)
-            //console.log(headerTop)
+                //console.log(scrollBar)
+                //console.log(headerTop)
 
-            if(scrollBar > headerTop) {
-                header.addClass('on');
-            } else {
-                header.removeClass('on');
-            }
+                if (scrollBar > headerTop) {
+                    header.addClass('on');
+                } else {
+                    header.removeClass('on');
+                }
             });//window.scrollTop() => 화면의 스크롤 y축값 
 
             //depth01 마우스 호버시 background색 형성
             let depth01 = $('.depth01');
             let depth02 = $('.depth02');
 
-            for(let i=0; i < depth01.length; i++){
-            depth01[i].addEventListener('mouseenter', () => {
-                //alert();
-                header.addClass('background-active');
-            });
-            depth01[i].addEventListener('mouseleave', () => {
-                header.removeClass('background-active');
-            });
+            for (let i = 0; i < depth01.length; i++) {
+                depth01[i].addEventListener('mouseenter', () => {
+                    //alert();
+                    header.addClass('background-active');
+                });
+                depth01[i].addEventListener('mouseleave', () => {
+                    header.removeClass('background-active');
+                });
             }
 
             //2차메뉴 싱글드롭다운
-            depth01.mouseenter(function(){
+            depth01.mouseenter(function () {
                 $(this).find(depth02).stop().slideDown();
             });
-            depth01.mouseleave(function(){
+            depth01.mouseleave(function () {
                 depth02.stop().slideUp();
             });
 
             console.log($('.depth01').position().left)
-            $('.depth01').mouseenter(function(){
+            $('.depth01').mouseenter(function () {
                 console.log($(this).position().left)
                 //position().left
                 //부모가 가지는 위치에서 부터 시작
                 //선택된 요소의 x축 좌표값을 가짐.
                 let move = $(this).position().left;
                 $('.marker').stop().animate({
-                    left : move
+                    left: move
                 });
             });//.menu ul li .mouseenter()
-            depth01.mouseleave(function(){
-            $('.marker').stop().animate({
-                left: '-100%' // 왼쪽으로 이동하여 사라지도록 애니메이션 적용
+            depth01.mouseleave(function () {
+                $('.marker').stop().animate({
+                    left: '-100%' // 왼쪽으로 이동하여 사라지도록 애니메이션 적용
+                });
             });
-        });
 
-        $(document).ready(function(){
-        $(".main_category ul li").mouseenter(function(){
-            $(this).css("transform", "rotate(360deg)");
-        }).mouseleave(function(){
-            $(this).css("transform", "rotate(0deg)");
-        });
-    });
+            $(document).ready(function () {
+                $(".main_category ul li").mouseenter(function () {
+                    $(this).css("transform", "rotate(360deg)");
+                }).mouseleave(function () {
+                    $(this).css("transform", "rotate(0deg)");
+                });
+            });
 
-    
+
 
         });//jquery end
     </script>
 </head>
+
 <body>
     <div id="wrap">
         <header class="header" id="header">
             <div class="inner">
                 <h1><a href=#>
-                    <img src="img/logo.png" alt="로고"/>
-                </a></h1> <!-- 로고 -->
+                        <img src="img/logo.png" alt="로고" />
+                    </a></h1> <!-- 로고 -->
                 <div class="util">
                     <ul class="util_txt">
                         <li><a href="#">로그인</a></li>
                         <li><a href="#">회원가입</a></li>
-                        <li><a href="#"><img src="img/icons8-수색-48.png" alt="검색"/></a></li>
+                        <li><a href="#"><img src="img/icons8-수색-48.png" alt="검색" /></a></li>
                     </ul><!-- .util_txt end -->
                 </div><!-- .util end -->
                 <nav>
@@ -156,16 +158,17 @@
                     <li><a href=#>EVENT</a></li>
                 </ul>
             </div><!-- .main_category end -->
+        </main><!-- #main end -->
 
-            <section class="cont01">
-                <div class="inner">
-                    <h3>PERFUME</h3>
+        <section class="cont01">
+            <div class="inner">
+                <h3>PERFUME</h3>
                 <div class="list">
                     <div class="item">
                         <a href="#">
                             <figure>
-                                <img src="img/퍼퓸_아이템1.jpg" alt=""/>
-                                <img src="img/애프터블로우_오드퍼퓸_로즈부케_001_01.jpg" alt=""/>
+                                <img src="img/퍼퓸_아이템1.jpg" alt="" />
+                                <img src="img/애프터블로우_오드퍼퓸_로즈부케_001_01.jpg" alt="" />
                             </figure>
                             <div class="info">
                                 <h4>오 드 퍼퓸 05 로즈 부케</h4>
@@ -180,8 +183,8 @@
                     <div class="item">
                         <a href="#">
                             <figure>
-                                <img src="img/코튼포그.jpg" alt=""/>
-                                <img src="img/코튼포그_02.jpg" alt=""/>
+                                <img src="img/코튼포그.jpg" alt="" />
+                                <img src="img/코튼포그_02.jpg" alt="" />
                             </figure>
                             <div class="info">
                                 <h4>오 드 퍼퓸 06 코튼 포그 </h4>
@@ -196,8 +199,8 @@
                     <div class="item">
                         <a href="#">
                             <figure>
-                                <img src="img/시트러스문.jpg" alt=""/>
-                                <img src="img/perfume_citrus_01.jpg" alt=""/>
+                                <img src="img/시트러스문.jpg" alt="" />
+                                <img src="img/perfume_citrus_01.jpg" alt="" />
                             </figure>
                             <div class="info">
                                 <h4>오 드 퍼퓸 04 시트러스 문 </h4>
@@ -209,52 +212,152 @@
                         </a>
                     </div><!-- .item end -->
                 </div><!-- .list end -->
-                </div><!-- .inner end -->
-            </section><!-- .cont01 end -->
+            </div><!-- .inner end -->
+        </section><!-- .cont01 end -->
 
-            <section class="cont02">
-                <div class="inner">
-                  <div class="title_bg">
-                      <h3>HANDCREAM</h3>
-                      <figure>
-                        <img src="img/handcream_bg.png" alt=""/>
+        <section class="cont02">
+            <div class="inner">
+                <div class="title_bg">
+                    <h3>HANDCREAM</h3>
+                    <figure>
+                        <img src="img/handcream_bg.png" alt="" />
                     </figure>
                     <div class="view_more">
                         <a href="#">더 보기</a>
                     </div><!-- .view_more -->
-                  </div><!-- .title_bg -->
-                    <div class="list">
-                        <div class="item">
+                </div><!-- .title_bg -->
+                <div class="list">
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/핸드크림_시트러스문.jpg" alt="" />
+                            </figure>
+                            <h4>퍼퓸 핸드 크림 04 시트러스 문</h4>
+                            <strong>13,000원</strong>
+                        </a>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/핸드크림_텐더우드.jpg" alt="" />
+                            </figure>
+                            <h4>퍼퓸 핸드 크림 01 텐더 우드</h4>
+                            <strong>13,000원</strong>
+                        </a>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/핸드크림_파우더리로즈.jpg" alt="" />
+                            </figure>
+                            <h4>퍼퓸 핸드 크림 03 파우더리 로즈</h4>
+                            <strong>17,000원</strong>
+                        </a>
+                    </div><!-- .item end -->
+                </div><!-- .list end -->
+            </div><!-- .inner end -->
+        </section><!-- .cont02 end -->
+        <section class="cont03">
+            <img src="img/solid_perfume_gif.gif" alt="솔리드퍼퓸gif">
+        </section><!-- .cont03 end -->
+        <div class="text_slide">
+            <p>Afterblow SolidPerfume Afterblow SolidPerfume Afterblow SolidPerfume Afterblow SolidPerfume Afterblow SolidPerfume Afterblow SolidPerfume
+                Afterblow SolidPerfume Afterblow SolidPerfume Afterblow SolidPerfume Afterblow SolidPerfume Afterblow SolidPerfume Afterblow SolidPerfume 
+            </p>
+        </div><!-- .text_slide end -->
+        <section class="cont04">
+            <div class="inner">
+                <a href="#"><span>>더 보기</span></a>
+                <div class="list">
+                    <div class="event">
+                        <figure>
+                            <img src="img/4월_리미티드퍼퓸_이벤트.png" alt="4월 퍼퓸이벤트">
+                        </figure>
+
+                        <div class="title_txt">
+                            <h4>Afterblow Kakaotalk EVENT</h4>
+                        </div>
+                        <div class="content_txt">
+                            <p>이벤트기간 : 4/1 ~ 4/30 10:00</p>
+                            <p>해당 상품은 <strong>한정수량으로 사전 고지 없이 종료</strong>될 수 있습니다.</p>
+                            <p><strong>회원 전용 상품으로, 비회원/네이버페이는 주문이 불가합니다.</strong></p>
+                            <p>ID당 1번, 1개만 구매 가능합니다.</p>
+                            <div class="btn">
+                                <button>자세히 보기</button>
+                            </div><!-- .btn end-->
+                        </div><!-- .content_txt end -->
+                    </div><!-- .event end -->
+                    <div class="event">
+                        <figure>
+                            <img src="img/애프터블로우_공식_이벤트_4월.jpg" alt="4월 공식 사이트  이벤트">
+                        </figure>
+                        <div class="title_txt">
+                            <h4>Afterblow Official April Event</h4>
+                        </div>
+                        <div class="content_txt">
+                            <p>이벤트기간 : 4/1 10:00 ~ 4/30 23:59</p>
+                            <p>본 행사는 당사 사정에 따라 사전 공지없이 조기 종료될 수 있습니다.</p>
+                            <p>본 행사는 애프터블로우 공식몰에서만 진행됩니다.</p>
+                            <p>사은품 조기 소진 시 별도의 안내 없이 종료될 수 있습니다.</p>
+                            <div class="btn">
+                                <button>자세히 보기</button>
+                            </div><!-- .btn end-->
+                        </div><!-- .content_txt end -->
+                    </div><!-- .event end -->
+                </div><!-- .list end -->
+            </div><!-- .inner end -->
+        </section><!-- .cont04 end -->
+
+        <footer class="footer" id="footer">
+            <div class="inner">
+                <div class="footer_wrap">
+                    <div class="company_info">
+                        <ul>
+                            <li><span>COMPANY:</span> (주)데이지크</li>
+                            <li><span>OWNER:</span> 연정미,이경재(byecom@byecom.co.kr)</li>
+                            <li><span>TELL:</span> 02-6959-5877</li>
+                            <li><span>ADDRESS:</span> Gangnam-gu, Seoul, Korea 4F, 513, Teheran-ro,</li>
+                            <li><span>BUSINESS NO.:</span> 769-86-01723</li>
+                            <li><span>MAIL ORDER LICENSE:</span> 2020-서울강남-02057</li>
+                        </ul>
+                    </div><!-- .company_info end -->
+                    <div class="about_company">
+                        <ul>
                             <a href="#">
-                                <figure>
-                                    <img src="img/핸드크림_시트러스문.jpg" alt=""/>
-                                </figure>
-                                <h4>퍼퓸 핸드 크림 04 시트러스 문</h4>
-                                <strong>13,000원</strong>
+                                <li>Afterblow</li>
                             </a>
-                        </div><!-- .item end -->
-                        <div class="item">
                             <a href="#">
-                                <figure>
-                                    <img src="img/핸드크림_텐더우드.jpg" alt=""/>
-                                </figure>
-                                <h4>퍼퓸 핸드 크림 01 텐더 우드</h4>
-                                <strong>13,000원</strong>
+                                <li>Agreement</li>
                             </a>
-                        </div><!-- .item end -->
-                        <div class="item">
                             <a href="#">
-                                <figure>
-                                    <img src="img/핸드크림_파우더리로즈.jpg" alt=""/>
-                                </figure>
-                                <h4>퍼퓸 핸드 크림 03 파우더리 로즈</h4>
-                                <strong>17,000원</strong>
+                                <li>Privacy policy</li>
                             </a>
-                        </div><!-- .item end -->
-                    </div><!-- .list end -->
-                </div><!-- .inner end -->
-            </section><!-- .cont02 end -->
-        </main><!-- #main end -->
+                            <a href="#">
+                                <li>Guide</li>
+                            </a>
+                        </ul>
+                    </div><!-- .about_company -->
+                    <div class="sns">
+                        <p>SNS</p>
+                        <ul>
+                            <a href="https://www.instagram.com/afterblow_official/">
+                                <li><img src="img/icons8-인스-타-그램-48.png" alt="인스타그램 아이콘"></li>
+                            </a>
+                            <a href="https://m.facebook.com/people/After-blow/100076805794134/">
+                                <li><img src="img/icons8-페이스-북-50.png" alt="페이스북 아이콘"></li>
+                            </a>
+                            <a href="https://www.youtube.com/@afterblow.official6505">
+                                <li><img src="img/icons8-유튜브-재생-50.png" alt="유튜브 아이콘"></li>
+                            </a>
+                        </ul>
+                    </div><!-- .sns end -->
+                </div><!-- .footer_wrap -->
+            </div><!-- .inner end -->
+            <div class="copyright">
+                <p>Copyright © Afterblow. All rights reserved.</p>
+            </div><!-- .copyright end -->
+        </footer><!-- .footer end -->
     </div><!-- .wrap end -->
 </body>
+
 </html>
