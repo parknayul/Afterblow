@@ -98,7 +98,7 @@
                         <li><a href="#"><img src="img/icons8-수색-48.png" alt="검색" /></a></li>
                     </ul><!-- .util_txt end -->
                 </div><!-- .util end -->
-                <nav>
+                <nav class="pc_nav">
                     <ul class=pc_gnb>
                         <li class="depth01">
                             <a href="#">ABOUT</a>
@@ -131,14 +131,29 @@
                         </li><!-- .depth01 end -->
                         <div class="marker"></div><!-- .marker -->
                     </ul><!-- .pc_gnb end -->
-                </nav>
+                </nav><!-- pc_nav -->
+                <div class="mobile mobile_open">
+                    <h3>
+                        <button>메뉴</button>
+                    </h3>
+                </div><!-- .mobile mobile_open end -->
+
+                <nav class="mobile mobile_nav">
+                    <ul class="gnb">
+                        <li><a href="#">스킨케어</a></li>
+                        <li><a href="#">바디케어</a></li>
+                        <li><a href="#">헤어케어</a></li>
+                        <li><a href="#">홈케어</a></li>
+                        <li><a href="#">제로웨이스트</a></li>
+                    </ul><!-- .gnb end -->
             </div> <!-- .inner end -->
         </header><!-- .header end -->
 
         <main id="main">
             <section class="main_visual">
                 <figure>
-                    <img src="img/main_visual.jpg" alt="배경" />
+                    <img class="pc_bg" src="img/main_visual.jpg" alt="배경" />
+                    <img class="mobile_bg" src="img/afterblow_mobile.jpg" alt="모바일 배경">
                 </figure>
 
                 <div>
@@ -158,7 +173,7 @@
                     <li><a href=#>EVENT</a></li>
                 </ul>
             </div><!-- .main_category end -->
-        </main><!-- #main end -->
+
 
         <section class="cont01">
             <div class="inner">
@@ -187,7 +202,7 @@
                                 <img src="img/코튼포그_02.jpg" alt="" />
                             </figure>
                             <div class="info">
-                                <h4>오 드 퍼퓸 06 코튼 포그 </h4>
+                                <h4>오 드 퍼퓸 06 코튼 포그</h4>
                                 <div>
                                     <span>42,000원</span>
                                     <strong>37,800원</strong>
@@ -203,7 +218,23 @@
                                 <img src="img/perfume_citrus_01.jpg" alt="" />
                             </figure>
                             <div class="info">
-                                <h4>오 드 퍼퓸 04 시트러스 문 </h4>
+                                <h4>오 드 퍼퓸 04 시트러스 문</h4>
+                                <div>
+                                    <span>42,000원</span>
+                                    <strong>37,800원</strong>
+                                </div>
+                            </div><!-- .info end -->
+                        </a>
+                    </div><!-- .item end -->
+
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/자스민머스크.jpg" alt="" />
+                                <img src="img/자스민머스크2.jpg" alt="" />
+                            </figure>
+                            <div class="info">
+                                <h4>오 드 퍼퓸 02 자스민 머스크</h4>
                                 <div>
                                     <span>42,000원</span>
                                     <strong>37,800원</strong>
@@ -233,7 +264,7 @@
                                 <img src="img/핸드크림_시트러스문.jpg" alt="" />
                             </figure>
                             <h4>퍼퓸 핸드 크림 04 시트러스 문</h4>
-                            <strong>13,000원</strong>
+                            <strong>Sensual Woody Scent</strong>
                         </a>
                     </div><!-- .item end -->
                     <div class="item">
@@ -242,7 +273,7 @@
                                 <img src="img/핸드크림_텐더우드.jpg" alt="" />
                             </figure>
                             <h4>퍼퓸 핸드 크림 01 텐더 우드</h4>
-                            <strong>13,000원</strong>
+                            <strong>Citrus&Floral Fragrance</strong>
                         </a>
                     </div><!-- .item end -->
                     <div class="item">
@@ -251,10 +282,22 @@
                                 <img src="img/핸드크림_파우더리로즈.jpg" alt="" />
                             </figure>
                             <h4>퍼퓸 핸드 크림 03 파우더리 로즈</h4>
-                            <strong>17,000원</strong>
+                            <strong>Comfort of powdery scent</strong>
+                        </a>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/핸드크림_로즈부케.jpg" alt="" />
+                            </figure>
+                            <h4>퍼퓸 핸드 크림 05 로즈 부케</h4>
+                            <strong>The rose scent like</strong>
                         </a>
                     </div><!-- .item end -->
                 </div><!-- .list end -->
+                <div class="mobile_button">
+                    <span>더 보기</span>
+                </div><!-- .mobile_button end -->
             </div><!-- .inner end -->
         </section><!-- .cont02 end -->
         <section class="cont03">
@@ -267,7 +310,7 @@
         </div><!-- .text_slide end -->
         <section class="cont04">
             <div class="inner">
-                <a href="#"><span>>더 보기</span></a>
+                <a href="#"><span>> 더 보기</span></a>
                 <div class="list">
                     <div class="event">
                         <figure>
@@ -305,6 +348,9 @@
                         </div><!-- .content_txt end -->
                     </div><!-- .event end -->
                 </div><!-- .list end -->
+                <div class="mobile_btn">
+                    <button>List</button>
+                </div><!-- .mobile_btn -->
             </div><!-- .inner end -->
         </section><!-- .cont04 end -->
 
@@ -357,6 +403,7 @@
                 <p>Copyright © Afterblow. All rights reserved.</p>
             </div><!-- .copyright end -->
         </footer><!-- .footer end -->
+    </main><!-- #main end -->
     </div><!-- .wrap end -->
 </body>
 
