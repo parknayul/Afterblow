@@ -47,6 +47,10 @@ html, body {
     display: none;
 }
 
+.mobile_bg {
+    display: none;
+}
+
 .cont02 .inner .list .item:last-child {
     display: none;
 }
@@ -91,22 +95,22 @@ html, body {
     display: block;
 }
 
-.header .util {
+.header .pc_util {
     order: 2;
 }
 
-.header .util .util_txt {
+.header .pc_util .util_txt {
     display: flex;
     align-items: center;
     font-family: 'GmarketSansMedium';
     font-size: 1.6rem;
 }
 
-.header .util .util_txt li {
+.header .pc_util .util_txt li {
     padding-right: 10px;
 }
 
-.header .util .util_txt img {
+.header .pc_util .util_txt img {
     height: 25px;
 }
 
@@ -715,12 +719,16 @@ html, body {
     .header .inner {
         height: 100%;
     }
+
+    .header .pc_util .util_txt li:last-child {
+        display: none;
+    }
     
     .header .inner .pc_nav {
         display: none;
     }
 
-    .header .util .util_txt {
+    .header .pc_util .util_txt {
         font-size: 1.2rem;
     }
 
@@ -999,6 +1007,13 @@ html, body {
 }
 
 @media screen and (max-width:420px) {
+    .header h1 {
+        width: 130px;
+    }
+
+    .mobile_open button {
+        font-size: 1.4rem;
+    }
     .cont01 .inner .list .item figure {
         height: 90.15vw;
     }
