@@ -721,7 +721,7 @@ html, body {
     }
 
     .mobile_btn {
-        display: none;
+        display: block;
     }
 
     .header .inner {
@@ -813,6 +813,7 @@ html, body {
     }
 
     .cont02 .inner .mobile_button {
+        display: block;
         margin-top: 2rem;
         border-radius: 15px;
         overflow: hidden;
